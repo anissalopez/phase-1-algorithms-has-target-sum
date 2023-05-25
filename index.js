@@ -1,5 +1,19 @@
 function hasTargetSum(array, target) {
-  // Write your algorithm here
+  // Write your algorithm her
+  let num1 = 0;
+  let num2 = 0;
+  for (let i = 0; i < array.length; i++){
+    num1 = array[i];
+    for (let j = 1; j < array.length; j++){
+      num2 = array[j];
+      if (j > i){
+        if (num1 + num2 === target){
+        return true;
+        }  
+      }
+    }
+  }
+return false;
 }
 
 /* 
@@ -7,7 +21,23 @@ function hasTargetSum(array, target) {
 */
 
 /* 
-  Add your pseudocode here
+need to write a function that loops through an array and adds each number together to see if their sum is equal to the target 
+
+I need a loop 
+
+and I need to figure out how to get that loop to add each number together to test against the target number 
+
+
+
+array [0] would be 3 
+
+I need to test the indexes in the array like so:
+[0][1], [0][2], 0[3] until 0[n] with n representing the last integer in the array. To get the last integer in the array i would have to subtract the arrays length -1
+to find that integers index in the array 
+
+then i would need to test [1][2], [1][3], [1][n]
+
+
 */
 
 /*

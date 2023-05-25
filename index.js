@@ -4,13 +4,13 @@ function hasTargetSum(array, target) {
   let num2 = 0;
   for (let i = 0; i < array.length; i++){
     num1 = array[i];
-    for (let j = 1; j < array.length; j++){
+    for (let j = i + 1; j < array.length; j++){
       num2 = array[j];
-      if (j > i){
+      
         if (num1 + num2 === target){
         return true;
-        }  
-      }
+      
+       }
     }
   }
 return false;
